@@ -23,7 +23,7 @@
 .navegador > ul{
     list-style-type: none;
     display: flex;
-    
+    z-index: 1;
    
 }
 

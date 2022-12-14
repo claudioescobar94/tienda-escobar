@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <nav class="navegador">
         <img class="logo" src="../assets/img/logo.png" alt="logo">
+        <i class="fa-solid fa-bars"></i>
         <ul>    
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./productos.html">Productos</a>
@@ -33,33 +36,40 @@
     </header>
     <main class="productos">
 
-        <div class="contenedor">
-            <h3>Remeras</h3>
-            <img  src="../assets/img/Remeras.jpg" alt="Remeras">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, totam.</p>
-            <button class="btn">Ver más</button>
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="contenedor">
+                <h3>Remeras</h3>
+                <img  src="../assets/img/Remeras.jpg" alt="Remeras">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, totam.</p>
+                <button class="btn">Ver más</button>
+            </div>
+        </div>
+       
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="contenedor">
+                <h3>Pantalones</h3>
+                <img  src="../assets/img/Pantalones.jpg" alt="Pantalones">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi!</p>
+                <button class="btn">Ver más</button>
+            </div>
+        </div>
+       
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="contenedor">
+                <h3>Camperas</h3>
+                <img  src="../assets/img/Camperas.jpg" alt="Camperas">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi!</p>
+                <button class="btn">Ver más</button>
+            </div>
         </div>
 
-        
-        <div class="contenedor">
-            <h3>Pantalones</h3>
-            <img  src="../assets/img/Pantalones.jpg" alt="Pantalones">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi!</p>
-            <button class="btn">Ver más</button>
-        </div>
-        
-        <div class="contenedor">
-            <h3>Camperas</h3>
-            <img  src="../assets/img/Camperas.jpg" alt="Camperas">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi!</p>
-            <button class="btn">Ver más</button>
-        </div>
-
-        <div class="contenedor">
-            <h3>Zapatillas</h3>
-            <img  src="../assets/img/Zapatillas.jpg" alt="Zapatillas">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi!</p>
-            <button class="btn">Ver más</button>
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="contenedor">
+                <h3>Zapatillas</h3>
+                <img  src="../assets/img/Zapatillas.jpg" alt="Zapatillas">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi!</p>
+                <button class="btn">Ver más</button>
+            </div>
         </div>
 
     </main>
@@ -97,5 +107,9 @@
         </div>
    
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
