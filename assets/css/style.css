@@ -125,7 +125,7 @@ footer ul li{
 .titulo {
     padding: 30px;
     text-align: center;
-    background-color: rgb(177, 192, 243);;
+    background-color: rgb(177, 192, 243);
 }
 
 .productos{
@@ -198,14 +198,65 @@ form .btn {
 
 
 
-.main{
+.mainUbi{
     display: flex;
     justify-content: center;
 }
+
+
+.ubicacion{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 150px 100px 550px 210px;
+}
+.ubicacion .navegador{
+
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.tituloUbi{
+
+    grid-column: 1/5;
+    grid-row: 2/3;
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(177, 192, 243);
+}
+
+.mainUbi{
+
+    grid-column: 1/4; 
+    grid-row: 3/4; 
+    align-self: center;
+     
+
+}
+
+.asideUbi{
+
+    grid-column: 4/5; 
+    grid-row: 3/4; 
+    align-self: center; 
+    padding: 20px; 
+   
+}
+
+.footerUbi{
+
+    grid-column: 1/5; 
+    grid-row: 4/5;   
+}
+
+
 .map{
     display: block;
-    padding: 50px;  
+    padding: 50px; 
+    
+
+    
 }
+
 
 @media(max-width:806px){
 
