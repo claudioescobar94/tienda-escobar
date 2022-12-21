@@ -16,6 +16,15 @@
 }
 .logo  {
     width: 200px;
+    animation-name: logo;
+    animation-duration: 8s;
+    position: relative;
+
+}
+
+@keyframes logo {
+    0% { left: 50%; }
+    50% { left: 0px; }
 }
 .navegador .fa-bars {
     display: none;
@@ -101,6 +110,7 @@ footer {
     background-color: rgb(115, 85, 224);
     color: aliceblue;
 }
+
 .piePagina{
     
     display: flex;
@@ -142,6 +152,10 @@ footer ul li{
 
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
 .contenedor{
     padding: 5px;
     width: 250px; 
@@ -320,4 +334,11 @@ form .btn {
 
     
     }
+}
+
+.tarjeta{
+    border: solid 1px;
+    border-radius: 5px;
+    
+
 }
