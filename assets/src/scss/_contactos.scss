@@ -1,0 +1,21 @@
+form{
+    display: flex;
+    justify-content: center;
+}
+
+form .btn {
+    margin-left: 45px;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 20px;
+    
+}
+
+.contacto > label{
+    display: block;
+    margin: 5px 0px;
+    width: 200px; 
+}

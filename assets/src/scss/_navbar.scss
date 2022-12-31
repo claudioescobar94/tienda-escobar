@@ -1,0 +1,117 @@
+.navegador{
+
+    .fa-bars {
+        display: none;
+    }
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+
+  
+    
+    > img {
+        
+            width: 100px;
+            animation-name: logo;
+            animation-duration: 8s;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+
+    
+
+    >ul{
+        
+        list-style-type: none;
+        display: flex;
+        z-index: 1;
+        > li {
+            position: relative;
+            > a {
+                text-decoration: none;
+                color: white;
+                padding: 10px 20px;
+                display: block;
+                &:hover{
+                    background-color: grayscale($color: #726a6a);
+                    border-radius: 10px;
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                }
+                font-size: 20px;
+            }
+
+           
+            }
+        }
+        
+    
+
+}
+
+@media(max-width:806px){
+
+    .navegador{
+        flex-direction: row-reverse;
+    }
+    .navegador .fa-bars {
+        display: block;
+        font-size: 24px;
+        
+    }
+
+    .navegador >ul{
+        position:fixed;
+        background-color:  gray ;
+        width: 250px;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        justify-content: start;
+        padding-top: 80px;
+        align-items: center;
+        transition: 0.2s;
+        left: -300px;
+    }
+
+
+
+    .navegador .fa-bars:hover + ul {
+        left: 0;
+    }
+
+    .navegador ul:hover {
+        left: 0; 
+    }
+
+    .navegador > ul > li:hover ul{
+        
+        left: 120px;
+        top: 0;
+        height: 100vh;
+
+    }
+
+
+    .logo  {
+        width: 100px;
+    }
+
+    .encabezado{
+        background-image: url(/assets/img/fondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+       
+        display: flex;
+        justify-content: end;
+        align-items:center;
+        padding-right: 100px;
+
+    
+    }
+}
