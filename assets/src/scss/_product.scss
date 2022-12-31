@@ -1,73 +1,4 @@
-#contenCarrusel{
-   
-    height: 400px;
-    overflow: hidden;
-    
 
-    .carrusel{
-        
-        height: 100%;
-        position: relative;
-        
-
-
-        .flechasCarrusel{
-        
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            
-        }
-
-        #tarjetaCarrusel-1{
-
-            
-            height: 100%;
-            overflow: hidden;
-            position: absolute;
-            left: 10%;
-            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        }
-
-        #tarjetaCarrusel-2{
-            
-            
-            height: 100%;
-            overflow: hidden;
-            position: absolute;
-            left: 10%;
-            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        }
-
-        #tarjetaCarrusel-3{
-            
-            
-            height: 100%;
-            position: absolute;
-            left: 10%;
-            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        }
-    }  
-}
-
-img{
-    height: 100%;
-    
-}
-
-#contePuntos{
-        
-    display: flex;
-    justify-content: center;
-    font-size: larger;
-
-
-}
 
 a{  
     text-decoration: none;
@@ -126,5 +57,7 @@ a{
     }
 
 }
+
+
 
 

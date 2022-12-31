@@ -1,10 +1,12 @@
 .headerIndex{
     position: relative;
     background-color: gray;
-     
-    > img{
-        width: 100%;      
-    }
+   
+
+    >img{
+        width: 100%;
+    }; 
+    
     > div{
         position: absolute;
         transform: translate(-50% , -50% );
@@ -23,10 +25,59 @@
             color: white;
             font-weight: bold;
             border: none;
-            width: 105px;
+            width: 120px;
             
         }
     }
    
+
+}
+@media(max-width:806px){
+
+    .headerIndex{
+        position: relative;
+        background-color: gray;
+        
+       
+    
+        >img{
+            width: 100%;
+        }; 
+        
+        > div{
+
+            position: absolute;
+            transform: translate(-50% , -50% );
+            top: 80%;
+            left: 70%;
+            width: 230px;
+            color: white;
+            text-align: center;
+            h1 {
+                font-size: 20px;
+               
+            }
+            p {
+                font-size: 15px; 
+                display: none;
+            }
+    
+            > button {
+            
+                margin-top: 5px;
+                padding: 5px 0px;
+                background-color: rgb(97, 97, 110);
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                border: none;
+                width: 90px;
+                font-size: 12px;
+                
+            }
+        }
+       
+    
+    }  
 
 }

@@ -11,6 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-family: var(--bs-body-font-family);
 }
 .navegador .fa-bars {
   display: none;
@@ -117,13 +118,50 @@
   color: white;
   font-weight: bold;
   border: none;
-  width: 105px;
+  width: 120px;
 }
 
+@media (max-width: 806px) {
+  .headerIndex {
+    position: relative;
+    background-color: gray;
+  }
+  .headerIndex > img {
+    width: 100%;
+  }
+  .headerIndex > div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 70%;
+    width: 230px;
+    color: white;
+    text-align: center;
+  }
+  .headerIndex > div h1 {
+    font-size: 20px;
+  }
+  .headerIndex > div p {
+    font-size: 15px;
+    display: none;
+  }
+  .headerIndex > div > button {
+    margin-top: 5px;
+    padding: 5px 0px;
+    background-color: rgb(97, 97, 110);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 90px;
+    font-size: 12px;
+  }
+}
 footer {
   background-color: gray;
   color: aliceblue;
   padding-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 footer > .piePagina {
   display: flex;
@@ -175,55 +213,66 @@ footer .derechoReservado {
   text-align: center;
 }
 
-#contenCarrusel {
-  height: 400px;
-  overflow: hidden;
+@media (max-width: 806px) {
+  footer {
+    background-color: gray;
+    color: aliceblue;
+    padding-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  footer > .piePagina {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer > .piePagina ul {
+    list-style-type: none;
+    padding: 10px 20px;
+  }
+  footer > .piePagina ul li {
+    padding: 3px;
+  }
+  footer > .piePagina .redesContainer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer > .piePagina .redesContainer ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 30px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    line-height: 50px;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+  }
+  footer > .piePagina .redesContainer ul li:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
+  footer > .piePagina .redesContainer ul .facebook:hover {
+    background: var(--facebook);
+  }
+  footer > .piePagina .redesContainer ul .instagram:hover {
+    background: var(--instagram);
+  }
+  footer > .piePagina .redesContainer ul .twitter:hover {
+    background: var(--twitter);
+  }
+  footer > .piePagina .redesContainer ul .linkedin:hover {
+    background: var(--linkedin);
+  }
+  footer .derechoReservado {
+    padding: 15px 10px;
+    text-align: center;
+  }
 }
-#contenCarrusel .carrusel {
-  height: 100%;
-  position: relative;
-}
-#contenCarrusel .carrusel .flechasCarrusel {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-#contenCarrusel .carrusel #tarjetaCarrusel-1 {
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  left: 10%;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-#contenCarrusel .carrusel #tarjetaCarrusel-2 {
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  left: 10%;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-#contenCarrusel .carrusel #tarjetaCarrusel-3 {
-  height: 100%;
-  position: absolute;
-  left: 10%;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-
-img {
-  height: 100%;
-}
-
-#contePuntos {
-  display: flex;
-  justify-content: center;
-  font-size: larger;
-}
-
 a {
   text-decoration: none;
 }
@@ -276,13 +325,13 @@ a {
   padding: 30px;
   text-align: center;
   background-color: rgb(189, 190, 192);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .nosotros {
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
-  background-color: rgb(189, 190, 192);
 }
 
 .parrafo {
@@ -300,7 +349,7 @@ a {
 .ubicacion {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 150px 100px 550px 230px;
+  grid-template-rows: 140px 100px 550px 300px;
 }
 
 .ubicacion .navegador {
@@ -377,9 +426,9 @@ form {
   display: flex;
   justify-content: center;
 }
-
-form .btn {
-  margin-left: 45px;
+form .bton {
+  margin: 25px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .contacto {
@@ -388,13 +437,33 @@ form .btn {
   justify-content: center;
   margin: 20px;
 }
-
 .contacto > label {
   display: block;
   margin: 5px 0px;
-  width: 200px;
+  width: 400px;
 }
 
+@media (max-width: 806px) {
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  form .bton {
+    margin: 25px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+  }
+  .contacto > label {
+    display: block;
+    margin: 5px 0px;
+    width: 300px;
+  }
+}
 :root {
   --facebook: #3b5999;
   --instagram: #e4405f;
