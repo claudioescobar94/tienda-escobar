@@ -120,25 +120,30 @@
     .mainUbi{
 
         grid-column: 1/5; 
-        grid-row: 3/4; 
-        align-self: center;
+        grid-row: 3/4;
+        
+        overflow: hidden;
+
+
+        .map{
+        
+            width: 300px;
+        
+        
+        }
+
          
     
     }
     .asideUbi{
 
-        display: none;
         grid-column: 4/5; 
         grid-row: 3/4; 
         align-self: center; 
         padding: 20px; 
-       
+        
+        p{
+            display: none;
+        }
     }
-    .map{
-        display: block;
-        width: 500px;
-       
-    
-    }
-
 }
