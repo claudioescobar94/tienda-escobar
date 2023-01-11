@@ -490,43 +490,106 @@ a {
 form {
   display: flex;
   justify-content: center;
+  background-color: rgb(189, 190, 192);
+  padding-bottom: 50px;
 }
-form .bton {
-  margin: 25px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+form .contacto {
+  background-color: rgb(83, 82, 82);
+  color: white;
+  padding: 30px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 15px;
+  gap: 10px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 100px 60px;
+  grid-template-areas: "zona1    zona2 " "zona3    zona4" "zona5    zona5" "zona6    zona6";
 }
-
-.contacto {
+form .contacto label:nth-child(1) {
+  grid-area: zona1;
+}
+form .contacto label:nth-child(2) {
+  grid-area: zona2;
+}
+form .contacto label:nth-child(3) {
+  grid-area: zona3;
+}
+form .contacto label:nth-child(4) {
+  grid-area: zona4;
+}
+form .contacto label:nth-child(5) {
+  grid-area: zona5;
+}
+form .contacto .bton {
+  grid-area: zona6;
+  height: 50px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+form .contacto .bton:hover {
+  background-color: rgb(182, 158, 108);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+form label {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 20px;
 }
-.contacto > label {
-  display: block;
-  margin: 5px 0px;
-  width: 400px;
+form label input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
 }
 
 @media (max-width: 806px) {
   form {
     display: flex;
     justify-content: center;
+    background-color: rgb(189, 190, 192);
+    padding-bottom: 50px;
   }
-  form .bton {
-    margin: 25px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  form .contacto {
+    background-color: rgb(83, 82, 82);
+    color: white;
+    padding: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 15px;
+    gap: 10px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 100px 60px;
+    grid-template-areas: "nomApell" "email" "tel" "asunto" "mensaje" "button";
   }
-  .contacto {
+  form .contacto label:nth-child(1) {
+    grid-area: nomApell;
+  }
+  form .contacto label:nth-child(2) {
+    grid-area: email;
+  }
+  form .contacto label:nth-child(3) {
+    grid-area: tel;
+  }
+  form .contacto label:nth-child(4) {
+    grid-area: asunto;
+  }
+  form .contacto label:nth-child(5) {
+    grid-area: mensaje;
+  }
+  form .contacto input:nth-child(6) {
+    grid-area: button;
+    height: 40px;
+  }
+  form .contacto label {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 20px;
   }
-  .contacto > label {
-    display: block;
-    margin: 5px 0px;
-    width: 300px;
+  form .contacto label input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
   }
 }
 :root {

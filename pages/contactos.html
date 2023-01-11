@@ -25,35 +25,41 @@
     </nav>
     <header class="titulo">
         
-        <h1>Contactos</h1>
+        <h1>Contáctanos</h1>
 
     </header>
     <main>
         <form  action="" menthod="get">
              
             <div class="contacto">   
+
                 <label>
                     Nombre:
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre"  required>
                 </label>
-                <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
                 
-                <label>
-                    Apellido:
-                    
-                </label>
-                <input type="text" name="apellido" placeholder="Ingrese su apellido" required>
 
                 <label>
                     Email:
-                    
+                    <input type="email" name="email" placeholder="Ingrese su email" required>
                 </label>
-                <input type="email" name="email" placeholder="Ingrese su email" required>
+
+                <label>
+                    Telefono:
+                    <input type="email" name="email" placeholder="Ingrese su número de teléfono" required>
+                </label>
+
+                <label>
+                    Asunto:
+                    <input type="email" name="email" placeholder="Ingrese un asunto" required>
+                </label>
+                
 
                 <label>
                     Mensaje:
-                    
+                    <textarea name="mensaje" placeholder="Ingrese un mensaje" ></textarea>    
                 </label>
-                <textarea name="mensaje" placeholder="Ingrese un mensaje" ></textarea>
+                
                 
     
                 <input class="bton" type="submit" value="Enviar">
