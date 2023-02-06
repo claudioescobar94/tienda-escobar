@@ -1,0 +1,50 @@
+.rp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgb(238, 234, 234);
+
+
+    .ropa{
+        position: relative;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 20px;
+        width: 250px;
+        height: 350px;
+        background-color: white;
+        > img {
+            padding: 10px;
+        }
+        >div{
+            
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            bottom: 5px;
+            > p{
+                font-size: 20px;
+                padding: 15px;
+            }
+            > button {
+                font-size: 15px;
+                margin: 10px;
+                padding: 2px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                border: none;
+                background-color: rgb(238, 234, 234);
+                border-radius: 5px;
+                
+                &:hover{
+                    background-color: rgb(180, 176, 176);
+                    scale: 105%;
+                }
+            }
+        }
+    
+    }
+}
