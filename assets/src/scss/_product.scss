@@ -4,84 +4,163 @@ a{
     text-decoration: none;
 }
 
-.product{
+
+#boton-carrito {
+    border: none;
+    color: royalblue;
+    font-size: 40px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: royalblue;
+}
+#boton-carrito:focus {
+    outline: none;
+}
+
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-around;
+}
 
-    > div .contenedor {
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
-        width: 250px; 
-        height: 450px;
-        margin: 10px;
-        border: solid 1px black;
-        border-radius: 5px;
-        overflow: hidden;
-        
-        box-shadow: 5px 5px 10px;
-        
-        
-
-        >h3{
-            text-align: center;
-            padding: 10px;
-        }
-        
-        >img{
-
-            width: 100%;
-            height: 50%;
-            object-fit: cover;
-
-            >.camp{
-                border: solid 5px black;
-            }
-        }
-        >.camp{
-           
-            object-fit: none;
-            height: 240px;
-        }
-        >.pant{
-            width: 150px;
-
-        }
-
-        
-
-        >p{
-            text-align: center;
-            padding: 10px;
-        }
-        
-        >.bton{
-            margin-top: 2px;
-            padding: 5px 20px;
-            background-color: rgb(97, 97, 110);
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            border: none;
-            a {
-                text-decoration: none;
-                color: white;
-            }
-            &:hover{
-                background-color: rgb(180, 176, 176);
-                scale: 105%;
-            }
-             
-        }
-    
+.producto {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.precioProducto {
+    font-weight: 700;
+}
+.boton-agregar {
+    background-color: royalblue;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        scale: 105%;
     }
 
 }
 
+.boton-agregar:focus {
+    outline: none;
+}
 
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
 
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: royalblue;
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: royalblue;
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    
+}
+
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
+}
+
+@media(max-width:806px){
+    #contenedor-productos {
+        max-width: 1200px;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .producto {
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 20px;
+        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);  
+}
+}
 
