@@ -5,6 +5,8 @@ const contenedorCarrito = document.getElementById('carrito-contenedor')
 
 const botonVaciar = document.getElementById('vaciar-carrito')
 
+const botonComprar = document.getElementById('comprar')
+
 const contadorCarrito = document.getElementById('contadorCarrito')
 
 const cantidad = document.getElementById('cantidad')
@@ -22,8 +24,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
 })
+
+botonComprar.addEventListener('click',()=>{
+    if(carrito.length !== 0){ 
+        Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Gracias por su compra',
+        showConfirmButton: false,
+        timer: 1500
+      }) 
+      carrito.length = 0
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    } 
+    else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes elegir un producto para comprar!',
+           
+          })
+      }
+
+    
+    actualizarCarrito()
+
+} )
 
 
 stockProductos.forEach((producto) => {
