@@ -315,6 +315,12 @@ a {
   text-decoration: none;
 }
 
+.carr {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 #boton-carrito {
   border: none;
   color: royalblue;

@@ -4,6 +4,12 @@ a{
     text-decoration: none;
 }
 
+.carr{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
 
 #boton-carrito {
     border: none;
@@ -163,6 +169,11 @@ a{
     outline: none;
 }
 
+.oculto {
+    display: none;
+  }
+  
+
 @media(max-width:806px){
     #contenedor-productos {
         max-width: 1200px;
@@ -189,4 +200,5 @@ a{
         min-width: 360px;
     }
 }
+
 
