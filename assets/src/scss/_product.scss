@@ -31,7 +31,7 @@ a{
 
 #contenedor-productos {
     max-width: 1200px;
-    margin: 60px auto;
+   
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -46,6 +46,10 @@ a{
     margin: 10px;
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    
+    
+
 }
 .precioProducto {
     font-weight: 700;
@@ -172,12 +176,24 @@ a{
 .oculto {
     display: none;
   }
+
+.filter {
+    display: none;
+}
+
+.barra{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
   
 
 @media(max-width:806px){
     #contenedor-productos {
         max-width: 1200px;
-        margin: 60px auto;
+        
         display: grid;
         grid-template-columns: 50% 50%;
     }
@@ -198,6 +214,19 @@ a{
 
     .modal-carrito{
         min-width: 360px;
+    }
+
+    #boton-carrito {
+        border: none;
+        color: royalblue;
+        font-size: 25px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px 20px;
+        transition: all .3s;
+    }
+    .filter {
+        display: none;
     }
 }
 
