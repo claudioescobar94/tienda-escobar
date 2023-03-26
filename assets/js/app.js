@@ -1,3 +1,4 @@
+let stockProductos;
 const contenedorProductos = document.getElementById("contenedor-productos");
 
 const contenedorCarrito = document.getElementById("carrito-contenedor");
@@ -16,7 +17,26 @@ const buttonSearch = document.getElementById("boton-buscar");
 
 let carrito = [];
 
-document.addEventListener("DOMContentLoaded", () => {
+(async () => {
+   const getData = async () => {
+     const response = await fetch("../assets/js/stock.json");
+     const data = await response.json();
+     stockProductos = data;
+     return data;
+   };
+
+   await getData();
+
+   await renderProductos(stockProductos);
+ })();
+
+/* fetch("../assets/js/stock.json").then(res=> res.json()).then(data =>{
+  console.log(data);
+  renderProductos(data)
+
+}) */
+
+document.addEventListener("DOMContentLoaded", async () => {
   if (localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     actualizarCarrito();
@@ -51,7 +71,7 @@ botonComprar.addEventListener("click", () => {
 });
 
 const renderProductos = (productos) => {
-  stockProductos.forEach((producto) => {
+  productos.forEach((producto) => {
     const div = document.createElement("div");
     div.classList.add("producto");
     div.innerHTML = `
@@ -125,7 +145,6 @@ const actualizarCarrito = () => {
     0
   );
 };
-renderProductos(stockProductos);
 
 inputSearch.addEventListener("keyup", (event) => {
   const searchText = event.target.value.toLowerCase();
@@ -142,3 +161,4 @@ inputSearch.addEventListener("keyup", (event) => {
     event.target.value = "";
   }
 });
+
