@@ -30,11 +30,6 @@ let carrito = [];
    await renderProductos(stockProductos);
  })();
 
-/* fetch("../assets/js/stock.json").then(res=> res.json()).then(data =>{
-  console.log(data);
-  renderProductos(data)
-
-}) */
 
 document.addEventListener("DOMContentLoaded", async () => {
   if (localStorage.getItem("carrito")) {
